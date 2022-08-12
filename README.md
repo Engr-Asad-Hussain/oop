@@ -15,3 +15,4 @@ What you’ll learn:
   - [Class variables]() – explain the class variables (or attributes)
   - [Instance methods]() – guide you on instance methods and help you understand the differences between a function and a method.
   - [__init__()]() – show you how to use the __init__ method to initialize object’s attributes.
+  - [Instance variables]() – understand the instance variables.
