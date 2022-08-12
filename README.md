@@ -13,3 +13,5 @@ What you’ll learn:
   - [Object Oriented Programming]() – introduce to you the important concepts in Python object-oriented programming
   - [Class]() – learn how to define a class and create new objects from the class
   - [Class variables]() – explain the class variables (or attributes)
+  - [Instance methods]() – guide you on instance methods and help you understand the differences between a function and a method.
+  - [__init__()]() – show you how to use the __init__ method to initialize object’s attributes.
