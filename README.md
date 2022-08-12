@@ -12,3 +12,4 @@ What you’ll learn:
 ## Content
   - [Object Oriented Programming]() – introduce to you the important concepts in Python object-oriented programming
   - [Class]() – learn how to define a class and create new objects from the class
+  - [Class variables]() – explain the class variables (or attributes)
