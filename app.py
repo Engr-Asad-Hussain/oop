@@ -102,3 +102,53 @@ print('5')
 print(anonymous)
 print('6')
 print(anonymous.name)
+
+""" Define static method """
+
+# A static method is not bound to a class or any instances of the class. 
+# In Python, you use static methods to group logically related functions in a class. 
+# To define a static method, you use the @staticmethod decorator.
+class TemperatureConverter:
+    @staticmethod
+    def celsius_to_fahrenheit(c):
+        return 9 * c / 5 + 32
+
+    @staticmethod
+    def fahrenheit_to_celsius(f):
+        return 5 * (f - 32) / 9
+
+# To call a static method, you use the ClassName.static_method_name() syntax
+f = TemperatureConverter.celsius_to_fahrenheit(32)
+print(f)
+
+""" Single inheritance """
+
+# A class can reuse another class by inheriting it. 
+# When a child class inherits from a parent class, the child class can access the attributes 
+# and methods of the parent class.
+class Person:
+    counter = 0
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def greet(self):
+        return f'Hey, Mr. {self.name}. '
+
+class Employee(Person):
+    def __init__(self, name, age, job_title):
+        super().__init__(name, age)
+        self.job_title = job_title
+    
+    # To override the greet() method in the Person class, you can define the greet() method 
+    # in the Employee class as follows:
+    def greet(self):
+        return super().greet() + f'I will be {self.job_title} @Google'
+
+# Inside the __init__ method of the Employee class calls the __init__method of the Person 
+# class to initialize the name and age attributes. 
+# The super() allows a child class to access a method of the parent class.
+
+employee = Employee('Asad Hussain', 20, 'Software Engineer')
+print(employee.name, employee.age, employee.job_title)
+print(employee.greet())
