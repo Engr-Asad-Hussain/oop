@@ -18,3 +18,4 @@ What you’ll learn:
   - [Instance variables]() – understand the instance variables.
   - [Class methods]() - understand the class methods.
   - [Private attributes]() – learn about private attributes and how to use them effectively.
+  - [Class attributes]() – understand class attributes and more importantly when you should use class attributes.
