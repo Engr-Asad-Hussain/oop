@@ -19,3 +19,4 @@ What you’ll learn:
   - [Class methods]() - understand the class methods.
   - [Private attributes]() – learn about private attributes and how to use them effectively.
   - [Class attributes]() – understand class attributes and more importantly when you should use class attributes.
+  - [Static methods]() – explain to you static methods and shows you how to use them to group related functions in a class.
