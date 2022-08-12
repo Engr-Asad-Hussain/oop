@@ -10,6 +10,7 @@ What you’ll learn:
 - SOLID principles in object-oriented programming.
 
 ## Content
+- Section 1. Classes and objects
   - [Object Oriented Programming]() – introduce to you the important concepts in Python object-oriented programming
   - [Class]() – learn how to define a class and create new objects from the class
   - [Class variables]() – explain the class variables (or attributes)
@@ -20,3 +21,4 @@ What you’ll learn:
   - [Private attributes]() – learn about private attributes and how to use them effectively.
   - [Class attributes]() – understand class attributes and more importantly when you should use class attributes.
   - [Static methods]() – explain to you static methods and shows you how to use them to group related functions in a class.
+- Section 2. Special methods
