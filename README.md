@@ -22,3 +22,4 @@ What you’ll learn:
   - [Class attributes]() – understand class attributes and more importantly when you should use class attributes.
   - [Static methods]() – explain to you static methods and shows you how to use them to group related functions in a class.
 - Section 2. Special methods
+  - [__str__ method]() – show you how to use the __str__ dunder method to return the string representation of an object.
