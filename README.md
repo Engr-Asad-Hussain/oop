@@ -15,7 +15,7 @@ What you’ll learn:
   - [Class]() – learn how to define a class and create new objects from the class
   - [Class variables]() – explain the class variables (or attributes)
   - [Instance methods]() – guide you on instance methods and help you understand the differences between a function and a method.
-  - [__init__()]() – show you how to use the __init__ method to initialize object’s attributes.
+  - [__init__ method]() – show you how to use the __init__ method to initialize object’s attributes.
   - [Instance variables]() – understand the instance variables.
   - [Class methods]() - understand the class methods.
   - [Private attributes]() – learn about private attributes and how to use them effectively.
@@ -23,3 +23,4 @@ What you’ll learn:
   - [Static methods]() – explain to you static methods and shows you how to use them to group related functions in a class.
 - Section 2. Special methods
   - [__str__ method]() – show you how to use the __str__ dunder method to return the string representation of an object.
+  - [__repr__ method]() – learn how to use the __repr__ method and the main difference between __str__ and __repr__ methods.
