@@ -11,18 +11,18 @@ What you’ll learn:
 
 ## Content
 - Section 1. Classes and objects
-  - [Object Oriented Programming]() – introduce to you the important concepts in Python object-oriented programming
-  - [Class]() – learn how to define a class and create new objects from the class
-  - [Class variables]() – explain the class variables (or attributes)
-  - [Instance methods]() – guide you on instance methods and help you understand the differences between a function and a method.
-  - [__init__ method]() – show you how to use the __init__ method to initialize object’s attributes.
-  - [Instance variables]() – understand the instance variables.
-  - [Class methods]() - understand the class methods.
-  - [Private attributes]() – learn about private attributes and how to use them effectively.
-  - [Class attributes]() – understand class attributes and more importantly when you should use class attributes.
-  - [Static methods]() – explain to you static methods and shows you how to use them to group related functions in a class.
+  - [Object Oriented Programming](https://github.com/Engr-Asad-Hussain/oop/blob/main/classes_and_objects/oop.py) – introduce to you the important concepts in Python object-oriented programming
+  - [Class](https://github.com/Engr-Asad-Hussain/oop/blob/main/classes_and_objects/class.py) – learn how to define a class and create new objects from the class
+  - [Class variables](https://github.com/Engr-Asad-Hussain/oop/blob/main/classes_and_objects/class_variables.py) – explain the class variables (or attributes)
+  - [Instance methods](https://github.com/Engr-Asad-Hussain/oop/blob/main/classes_and_objects/instance_methods.py) – guide you on instance methods and help you understand the differences between a function and a method.
+  - [__init__ method](https://github.com/Engr-Asad-Hussain/oop/blob/main/classes_and_objects/init.py) – show you how to use the __init__ method to initialize object’s attributes.
+  - [Instance variables](https://github.com/Engr-Asad-Hussain/oop/blob/main/classes_and_objects/instance_variables.py) – understand the instance variables.
+  - [Class methods](https://github.com/Engr-Asad-Hussain/oop/blob/main/classes_and_objects/class_methods.py) - understand the class methods.
+  - [Private attributes](https://github.com/Engr-Asad-Hussain/oop/blob/main/classes_and_objects/private_attributes.py) – learn about private attributes and how to use them effectively.
+  - [Class attributes](https://github.com/Engr-Asad-Hussain/oop/blob/main/classes_and_objects/class_attributes.py) – understand class attributes and more importantly when you should use class attributes.
+  - [Static methods](https://github.com/Engr-Asad-Hussain/oop/blob/main/classes_and_objects/static_methods.py) – explain to you static methods and shows you how to use them to group related functions in a class.
 - Section 2. Special methods
-  - [__str__ method]() – show you how to use the __str__ dunder method to return the string representation of an object.
-  - [__repr__ method]() – learn how to use the __repr__ method and the main difference between __str__ and __repr__ methods.
-  - [__eq__ method]() – learn how to define the equality logic for comparing objects by values.
-  - [__bool__ method]() – guide you on how to determine whether a custom object is True or False using the __bool__ method.
+  - [__str__ method](https://github.com/Engr-Asad-Hussain/oop/blob/main/special_methods/str.py) – show you how to use the __str__ dunder method to return the string representation of an object.
+  - [__repr__ method](https://github.com/Engr-Asad-Hussain/oop/blob/main/special_methods/repr.py) – learn how to use the __repr__ method and the main difference between __str__ and __repr__ methods.
+  - [__eq__ method](https://github.com/Engr-Asad-Hussain/oop/blob/main/special_methods/eq.py) – learn how to define the equality logic for comparing objects by values.
+  - [__bool__ method](https://github.com/Engr-Asad-Hussain/oop/blob/main/special_methods/bool.py) – guide you on how to determine whether a custom object is True or False using the __bool__ method.
