@@ -25,3 +25,4 @@ What you’ll learn:
   - [__str__ method]() – show you how to use the __str__ dunder method to return the string representation of an object.
   - [__repr__ method]() – learn how to use the __repr__ method and the main difference between __str__ and __repr__ methods.
   - [__eq__ method]() – learn how to define the equality logic for comparing objects by values.
+  - [__bool__ method]() – guide you on how to determine whether a custom object is True or False using the __bool__ method.
