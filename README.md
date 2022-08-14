@@ -28,3 +28,4 @@ What you’ll learn:
   - [__bool__ method](https://github.com/Engr-Asad-Hussain/oop/blob/main/special_methods/bool.py) – guide you on how to determine whether a custom object is True or False using the __bool__ method.
 - Section 3. Property
   - [Property]() – show you how to use the property class to create a property.
+  - [@property decorator]() – learn how to use the @property decorator to create a property.
