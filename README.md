@@ -26,3 +26,5 @@ What you’ll learn:
   - [__repr__ method](https://github.com/Engr-Asad-Hussain/oop/blob/main/special_methods/repr.py) – learn how to use the __repr__ method and the main difference between __str__ and __repr__ methods.
   - [__eq__ method](https://github.com/Engr-Asad-Hussain/oop/blob/main/special_methods/eq.py) – learn how to define the equality logic for comparing objects by values.
   - [__bool__ method](https://github.com/Engr-Asad-Hussain/oop/blob/main/special_methods/bool.py) – guide you on how to determine whether a custom object is True or False using the __bool__ method.
+- Section 3. Property
+  - [Property]() – show you how to use the property class to create a property.
