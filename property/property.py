@@ -58,3 +58,34 @@ print(jane)
 # property() class.
 
 """ The Python property class """
+
+# In the Person class, we create a new property object by calling the property() and assign 
+# the property object to the age attribute. 
+# Note that the age is a class attribute, not an instance attribute.
+from pprint import pprint
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.set_age(age)
+
+    def set_age(self, age):
+        if age < 0: raise ValueError('Age cannot be a negative number')
+        self._age = age
+
+    def get_age(self):
+        return self._age
+
+    age = property(fget=get_age, fset=set_age)
+
+pprint(Person.age)
+person = Person('Asad', 20)
+pprint(person.__dict__)
+person.age = 22
+pprint(person.age)
+
+""" Summary """
+# Use the Python property() class to define a property for a class.
+
+# Similarly, when you read from the age property object, Python will execute the function 
+# assigned to the fget argument, which is the get_age() method.
