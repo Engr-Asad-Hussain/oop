@@ -31,3 +31,5 @@ What you’ll learn:
   - [@property decorator]() – learn how to use the @property decorator to create a property.
   - [Read-only property]() – learn how to define read-only properties and use them for computed properties
   - [Delete a property]() – guide you on how to delete a property from an object.
+- Section 4. Single inheritance
+  - [Inheritance]() – explain to you the inheritance concept and how to define a class that inherits from another class.
