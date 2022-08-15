@@ -33,3 +33,4 @@ What you’ll learn:
   - [Delete a property]() – guide you on how to delete a property from an object.
 - Section 4. Single inheritance
   - [Inheritance]() – explain to you the inheritance concept and how to define a class that inherits from another class.
+  - [Overriding methods]() – show you how overriding methods work.
