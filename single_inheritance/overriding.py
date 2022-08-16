@@ -22,7 +22,7 @@ class SalesEmployee(Employee):
 
     @property
     def get_pay(self):
-        return super().get_pay + self.sales_incentive
+        return self._base_pay + self.sales_incentive
 
 sales = SalesEmployee('Asad Hussain', 30_000, 15_000)
 print(sales.get_pay)
