@@ -36,3 +36,4 @@ What you’ll learn:
   - [Overriding methods]() – show you how overriding methods work.
   - [super]() – learn how to delegate to the methods of the parent class from a method in the child class
   - [__slots__]() – use __slots__ to make the class more memory efficient
+  - [Abstract class]() – learn what abstract classes are and how to define abstract classes
