@@ -24,22 +24,30 @@
 
 # To model the payroll program in an object-oriented way, you may come up with the following 
 # classes: Employee, FulltimeEmployee, HourlyEmployee, and Payroll.
-
+from abc import abstractmethod
 class Employee:
-    def __init__(self, first_name, last_name, salary=None):
+    def __init__(self, first_name, last_name):
         self.first_name = first_name
         self.last_name = last_name
-        self._salary = salary
 
+    @property
+    def fullname(self):
+        return f'{self.first_name} {self.last_name}'
+
+    @abstractmethod
     def get_salary(self):
-        return self._salary
+        pass
 
 class FulltimeEmployee(Employee):
     def __init__(self, first_name, last_name, salary):
-        super().__init__(first_name, last_name, salary)
+        super().__init__(first_name, last_name)
+        self._salary = salary
+    
+    def get_salary(self):
+        return self._salary
 
 class HourlyEmployee(Employee):
-    def __init__(self, first_name, last_name, worked_hours, rate=5_000):
+    def __init__(self, first_name, last_name, worked_hours, rate=15):
         super().__init__(first_name, last_name)
         self.worked_hour = worked_hours
         self.rate = rate
@@ -47,13 +55,23 @@ class HourlyEmployee(Employee):
     def get_salary(self):
         return self.worked_hour * self.rate
 
-emp = Employee('Asad', 'Hussain', 20_000)
-print(emp.__dict__)
-fulltime = FulltimeEmployee('Amna', 'Arshad', 35_000)
-print(fulltime.__dict__)
-hourly = HourlyEmployee('Aisha', 'Habib', 20)
-print(hourly.__dict__)
+# The Payroll class will have a method that adds an employee to the employee list 
+# and print out the payroll.
+class Payroll:
+    def __init__(self):
+        self.emp_list = []
+    
+    def add(self, employees):
+        self.emp_list.append(employees)
 
-print(emp.get_salary())
-print(fulltime.get_salary())
-print(hourly.get_salary())
+    def print(self):
+        for emp in self.emp_list:
+            print(f"{emp.fullname}, \t${emp.get_salary()}")
+
+payroll = Payroll()
+payroll.add(FulltimeEmployee('Asad', 'Hussain', 20_000))
+payroll.add(FulltimeEmployee('Jane', 'Hussain', 30_000))
+payroll.add(HourlyEmployee('John', 'Hussain', 40_000))
+payroll.add(HourlyEmployee('Pope', 'Hussain', 50_000))
+
+payroll.print()
