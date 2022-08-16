@@ -34,3 +34,4 @@ What you’ll learn:
 - Section 4. Single inheritance
   - [Inheritance]() – explain to you the inheritance concept and how to define a class that inherits from another class.
   - [Overriding methods]() – show you how overriding methods work.
+  - [super]() – learn how to delegate to the methods of the parent class from a method in the child class
