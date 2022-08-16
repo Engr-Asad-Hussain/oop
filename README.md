@@ -37,3 +37,4 @@ What you’ll learn:
   - [super]() – learn how to delegate to the methods of the parent class from a method in the child class
   - [__slots__]() – use __slots__ to make the class more memory efficient
   - [Abstract class]() – learn what abstract classes are and how to define abstract classes
+  - [Protocol]() - use Python Protocol to define implicit interfaces.
