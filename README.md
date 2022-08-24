@@ -40,3 +40,4 @@ What you’ll learn:
   - [Protocol]() - use Python Protocol to define implicit interfaces.
 - Section 5. Enumeration
   - [Enumeration]() – show you how to define a enumeration in Python.
+  - [Enum Aliases & @enum.unique]() – introduce to you the enum aliases and how to use the enum.unique decorator to ensure the uniqueness of member values.
