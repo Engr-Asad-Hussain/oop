@@ -38,4 +38,5 @@ What you’ll learn:
   - [__slots__]() – use __slots__ to make the class more memory efficient
   - [Abstract class]() – learn what abstract classes are and how to define abstract classes
   - [Protocol]() - use Python Protocol to define implicit interfaces.
-  
+- Section 5. Enumeration
+  - [Enumeration]() – show you how to define a enumeration in Python.
