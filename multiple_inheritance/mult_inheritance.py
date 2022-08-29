@@ -19,3 +19,8 @@ class FlyingCar(Car, Flyable):
 fc = FlyingCar()
 fc.go()
 fc.fly()
+
+""" Method resolution order (MRO) """
+# When the parent classes have methods with the same name and the child class calls the method, 
+# Python uses the method resolution order (MRO) to search for the right method to call. 
+# Consider the following example
