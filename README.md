@@ -42,3 +42,4 @@ What you’ll learn:
   - [Enumeration]() – show you how to define a enumeration in Python.
   - [Enum Aliases & @enum.unique]() – introduce to you the enum aliases and how to use the enum.unique decorator to ensure the uniqueness of member values.
   - [Customize and extend enumerations]() – learn how to customize the behaviors of enum classes and how to extend the a custom enum class.
+  - [auto]() – use the enum auto class to generate unique values for enumeration’s members.
