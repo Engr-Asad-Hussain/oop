@@ -45,3 +45,4 @@ What you’ll learn:
   - [auto]() – use the enum auto class to generate unique values for enumeration’s members.
 - Section 7. Multiple inheritance
   - [Multiple inheritance]() – learn how to implement multiple inheritance and understand how the method resolution order (MRO) works in Python.
+  - [Mixin]() – introduce to you the mixin concept and how to implement mixin in Python.
