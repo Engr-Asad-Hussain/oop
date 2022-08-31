@@ -46,3 +46,5 @@ What you’ll learn:
 - Section 7. Multiple inheritance
   - [Multiple inheritance]() – learn how to implement multiple inheritance and understand how the method resolution order (MRO) works in Python.
   - [Mixin]() – introduce to you the mixin concept and how to implement mixin in Python.
+- Section 8. Descriptors
+  - [Descriptors]() – explain how descriptors work and how to use them to make the code reusable.
