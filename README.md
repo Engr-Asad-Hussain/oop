@@ -48,3 +48,4 @@ What you’ll learn:
   - [Mixin]() – introduce to you the mixin concept and how to implement mixin in Python.
 - Section 8. Descriptors
   - [Descriptors]() – explain how descriptors work and how to use them to make the code reusable.
+  - [Data vs non-data descriptors]() – understand the differences between data and non-data descriptors
