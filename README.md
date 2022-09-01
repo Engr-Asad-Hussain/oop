@@ -51,3 +51,4 @@ What you’ll learn:
   - [Data vs non-data descriptors]() – understand the differences between data and non-data descriptors.
 - Section 9. Metaprogramming
   - [__new__]() – learn how Python uses the __new__ method to create a new instance of a class.
+  - [dataclass]() – leverage dataclass to add special methods such as __init__ and __repr__ to custom classes.
