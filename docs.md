@@ -253,3 +253,19 @@ print(home.media_type) # text/html
   1 | Python implicitly pass the cls argument to class methods.	| Python doesn’t implicitly pass the cls argument to static methods
   2 | Class methods can access and modify the class state.	| Static methods cannot access or modify the class state.
   3 | Use @classmethod decorators to define class methods.	| Use @staticmethod decorators to define static methods.
+
+## Property
+- Use the Python <span class="red">property()</span> class to define a property for a class.
+- Lets have a class with two attributes <span class="red">name</span> and <span class="red">age</span>. Since age is an instance of a class, you can assign it a new value using ```person.age = 12```. The following assignment is also technically valid ```person.age = -2``` but not logically. So, every time you need to check using <span class="red">if/else</span> condition ```person.age > 0```. To avoid the repetitive code you will use <span class="red">getter</span> and <span class="red">setter</span> methods in the ```Person``` class. But this strategy will not work with backward compatibility.
+- By convention the getter and setter have the following name: ```get_<attribute>()``` and ```set_<attribute>()```.
+- User property on the class variables for backward compatibility also. 
+- ```property(fget=None, fset=None, fdel=None, doc=None)```
+- Reference: https://www.pythontutorial.net/python-oop/python-properties/
+
+
+## Property Decorator
+- You can user property on the class variables. To get the age of a Person object, you can use either the <span class="red">age</span> property or the <span class="red">get_age()</span> method. This creates an <span class="red">unnecessary redundancy</span>.
+- To avoid redundancy you use <span class="red">@property</span> on getter (props) and <span class="red">@props.setter</span> on the setter.
+- Use the <span class="red">@property</span> decorator to create a property for a class.
+- You can create read-only property by creating only the getter property on the attribute.
+- Reference: https://www.pythontutorial.net/python-oop/python-property-decorator/
