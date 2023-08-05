@@ -260,7 +260,9 @@ print(home.media_type) # text/html
 - By convention the getter and setter have the following name: ```get_<attribute>()``` and ```set_<attribute>()```.
 - User property on the class variables for backward compatibility also. 
 - ```property(fget=None, fset=None, fdel=None, doc=None)```
-- Reference: https://www.pythontutorial.net/python-oop/python-properties/
+- Reference: 
+  - https://www.pythontutorial.net/python-oop/python-properties/
+  - https://realpython.com/python-property/
 
 
 ## Property Decorator
@@ -268,4 +270,6 @@ print(home.media_type) # text/html
 - To avoid redundancy you use <span class="red">@property</span> on getter (props) and <span class="red">@props.setter</span> on the setter.
 - Use the <span class="red">@property</span> decorator to create a property for a class.
 - You can create read-only property by creating only the getter property on the attribute.
-- Reference: https://www.pythontutorial.net/python-oop/python-property-decorator/
+- Reference: 
+  - https://www.pythontutorial.net/python-oop/python-property-decorator/
+  - https://realpython.com/python-property/
