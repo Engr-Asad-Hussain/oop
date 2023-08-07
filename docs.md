@@ -306,3 +306,17 @@ print(home.media_type) # text/html
 - Define ```__slots__``` in the class if a class only contains <span class="red">fixed (or predetermined) instance attributes</span>, you can use the slots to instruct Python to use a more compact data structure instead of dictionaries. The ```__slots__``` optimizes the memory if the class has many objects.
 - Reference:
   - https://www.pythontutorial.net/python-oop/python-__slots__/
+
+
+## Abstraction
+- In object-oriented programming, an <span class="red">abstract class</span> is a class that cannot be <span class="red">instantiated</span>. However, you can create classes that <span class="red">inherit</span> from an abstract class.
+- Abstract classes are classes that you cannot create <span class="red">instances from</span>.
+- Typically, you use an abstract class to create a <span class="red">blueprint</span> for other classes.
+- Similarly, an abstract method is an method without an implementation. An abstract class may or may not include abstract methods.
+- Python doesn’t directly support abstract classes. But it does offer a module that allows you to define abstract classes. To define an abstract class, you use the <span class="red">abc (abstract base class)</span> module. The abc module provides you with the infrastructure for defining <span class="red">abstract base classes</span>.
+- Reference:
+  - https://www.pythontutorial.net/python-oop/python-abstract-class/
+  - https://www.youtube.com/watch?v=xvb5hGLoK0A
+
+
+
