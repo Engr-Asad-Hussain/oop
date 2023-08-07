@@ -270,6 +270,39 @@ print(home.media_type) # text/html
 - To avoid redundancy you use <span class="red">@property</span> on getter (props) and <span class="red">@props.setter</span> on the setter.
 - Use the <span class="red">@property</span> decorator to create a property for a class.
 - You can create read-only property by creating only the getter property on the attribute.
+- One of the most common <span class="red">use cases</span> of property() is building managed attributes that validate the input data before storing or even accepting it as a secure input.
+- Using @props and @props.setter for multiple instance attributes, makes your code repetition and breaks the <span class="red">DRY (Don’t Repeat Yourself)</span> principle, so you would want to refactor this code to avoid it. To do so, you can abstract out the repetitive logic using a <span class="red">descriptor</span>.
 - Reference: 
   - https://www.pythontutorial.net/python-oop/python-property-decorator/
   - https://realpython.com/python-property/
+
+
+## Raise Exceptions
+- General syntax to raise an exception is ```raise [expression [from another_expression]]```
+- Reference:
+  - https://realpython.com/python-raise-exception/
+
+
+## Inheritance
+- <span class="red">Inheritance</span> allows a class to reuse existing attributes and methods of another class.
+- The class that inherits from another class is called a <span class="red">child class</span>, a <span class="red">subclass</span>, or a <span class="red">derived class</span>.
+- The class from which other classes inherit is call a <span class="red">parent class</span>, a <span class="red">super class</span>, or a <span class="red">base class</span>.
+- Use ```isinstance()``` to check if an object is an instance of a class.
+- Use ```issubclass()``` to check if a class is a subclass of another class.
+- Use ```super()``` to call the methods of a parent class from a child class.
+- Reference:
+  - https://www.pythontutorial.net/python-oop/python-inheritance/
+  - https://www.pythontutorial.net/python-oop/python-super/
+
+
+## Overriding Methods & Attributes
+- The <span class="red">overriding</span> method allows a child class to provide a specific implementation of a method that is already provided by one of its parent classes.
+- Reference:
+  - https://www.pythontutorial.net/python-oop/python-overriding-method/
+
+
+## Slots
+- Python uses dictionaries to store instance attributes of instances of a class. This allows you to dynamically add more attributes to instances at runtime but also create a memory overhead.
+- Define ```__slots__``` in the class if a class only contains <span class="red">fixed (or predetermined) instance attributes</span>, you can use the slots to instruct Python to use a more compact data structure instead of dictionaries. The ```__slots__``` optimizes the memory if the class has many objects.
+- Reference:
+  - https://www.pythontutorial.net/python-oop/python-__slots__/
