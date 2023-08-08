@@ -329,3 +329,16 @@ print(home.media_type) # text/html
 - Reference(s):
   - https://www.pythontutorial.net/python-oop/python-protocol/
   - https://www.youtube.com/watch?v=xvb5hGLoK0A&t=452s
+
+
+## Enums
+- An <span class="red">enumeration</span> is a set of members that have associated unique constant values.
+- Create a new enumeration by defining a class that inherits from the Enum type of the ```enum``` module.
+- The members have the same types as the enumeration to which they belong.
+- Use the ```enumeration[member_name]``` to access a member by its name and ```enumeration(member_value)``` to access a member by its value.
+- Enumerations are <span class="red">iterable</span>.
+- Enumeration members are <span class="red">hashable</span>.
+- Enumerable are <span class="red">immuable</span>.
+- Cannot inherits from an enumeration unless it has <span class="red">no</span> members.
+- Reference(s):
+  - https://www.pythontutorial.net/python-oop/python-enumeration/
