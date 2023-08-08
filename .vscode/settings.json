@@ -1,0 +1,25 @@
+{
+    "[python]": {
+        // "editor.defaultFormatter": "ms-python.autopep8",
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+        "editor.formatOnSaveMode": "file",
+    },
+    "window.zoomLevel": 1,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true,
+        "source.fixAll": false,
+    },
+    // "editor.fontFamily": "Source Code Pro",
+    "editor.fontFamily": "Hack",
+    "editor.fontSize": 13,
+    "workbench.colorTheme": "Default Dark+",
+    "workbench.colorCustomizations": {
+        "titleBar.activeBackground": "#ffa2027e",
+    },
+    "python.languageServer": "Pylance",
+    "python.analysis.typeCheckingMode": "strict",
+    "python.analysis.diagnosticMode": "openFilesOnly",
+    "python.analysis.autoFormatStrings": true,
+    "python.analysis.autoImportCompletions": true
+}
