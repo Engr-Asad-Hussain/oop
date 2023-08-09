@@ -347,3 +347,12 @@ print(home.media_type) # text/html
 - Reference(s):
   - https://www.pythontutorial.net/python-oop/python-enumeration/
   - https://www.pythontutorial.net/python-oop/python-enum-unique/
+  - https://www.pythontutorial.net/python-oop/python-enum-class/
+
+
+## Multiple Inheritance
+- When a class inherits from a single class, you have single inheritance. Python allows a class to inherit from multiple classes. If a class inherits from two or more classes, you’ll have multiple inheritance. ```class ChildClass(ParentClass1, ParentClass2, ParentClass3):```
+- Python multiple inheritance allows one class to inherit from multiple classes.
+- The Method Order Resolution(MRO) defines the class search path to find the method to call. To get the MRO of the inherited class you can use ```class_name.__mro__```. When the parent classes have methods with the same name and the child class calls the method, Python uses the method resolution order (MRO) to search for the right method to call.
+- Reference(s):
+  - https://www.pythontutorial.net/python-oop/python-multiple-inheritance/
