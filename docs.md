@@ -331,7 +331,7 @@ print(home.media_type) # text/html
   - https://www.youtube.com/watch?v=xvb5hGLoK0A&t=452s
 
 
-## Enums
+## Enums (Enumerations)
 - An <span class="red">enumeration</span> is a set of members that have associated unique constant values.
 - Create a new enumeration by defining a class that inherits from the Enum type of the ```enum``` module.
 - The members have the same types as the enumeration to which they belong.
@@ -340,5 +340,10 @@ print(home.media_type) # text/html
 - Enumeration members are <span class="red">hashable</span>.
 - Enumerable are <span class="red">immuable</span>.
 - Cannot inherits from an enumeration unless it has <span class="red">no</span> members.
+- When an enumeration has different members with the same values, the first member is the main member while others are aliases of the main member.
+- Use the ```@enum.unique``` decorator from the enum module to enforce the uniqueness of the values of the members.
+- Use enum ```auto()``` class to generate unique values for enumeration members.
+- Python enumerations are classes. It means that you can add methods to them, or implement the dunder methods to customize their behaviors. ```__str__```, ```__eq__```, ```__lt__```, ```__bool__```. Define an emum class with no members and methods and extends this base class.
 - Reference(s):
   - https://www.pythontutorial.net/python-oop/python-enumeration/
+  - https://www.pythontutorial.net/python-oop/python-enum-unique/
