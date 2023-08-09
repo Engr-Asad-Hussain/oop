@@ -351,8 +351,18 @@ print(home.media_type) # text/html
 
 
 ## Multiple Inheritance
-- When a class inherits from a single class, you have single inheritance. Python allows a class to inherit from multiple classes. If a class inherits from two or more classes, you’ll have multiple inheritance. ```class ChildClass(ParentClass1, ParentClass2, ParentClass3):```
+- When a class inherits from a single class, you have single inheritance. Python allows a class to inherit from <span class="red">multiple classes</span>. If a class inherits from two or more classes, you’ll have multiple inheritance. ```class ChildClass(ParentClass1, ParentClass2, ParentClass3):```
 - Python multiple inheritance allows one class to inherit from multiple classes.
-- The Method Order Resolution(MRO) defines the class search path to find the method to call. To get the MRO of the inherited class you can use ```class_name.__mro__```. When the parent classes have methods with the same name and the child class calls the method, Python uses the method resolution order (MRO) to search for the right method to call.
+- The <span class="red">Method Order Resolution(MRO)</span> defines the class search path to find the method to call. To get the MRO of the inherited class you can use ```class_name.__mro__```. When the parent classes have methods with the same name and the child class calls the method, Python uses the method resolution order (MRO) to search for the right method to call.
 - Reference(s):
   - https://www.pythontutorial.net/python-oop/python-multiple-inheritance/
+
+## Mixin
+- A <span class="red">mixin</sapn> class provides method implementions for <span class="red">resuse</span> by multiple related subclasses.
+- A mixin is a class that provides method implementations for reuse by multiple related child classes. However, the inheritance is not implying an <span class="red">is-a relationship</span>.
+- A mixin doesn’t define a <span class="red">new type</span>. Therefore, it is not intended for direction <span class="red">instantiation</span>(```mx_instance = MixinClass()```)
+- A mixin bundles a set of methods for reuse. Each mixin should have a single specific behavior, implementing closely related methods.
+- Typically, a child class uses multiple inheritance to combine the mixin classes with a parent class.
+- Since Python doesn’t define a formal way to define mixin classes, it’s a good practice to name mixin classes with the <span class="red">suffix Mixin</span>.
+- Reference(s):
+  - https://www.pythontutorial.net/python-oop/python-mixin/
