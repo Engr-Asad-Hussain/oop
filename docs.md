@@ -271,7 +271,7 @@ print(home.media_type) # text/html
 - Use the <span class="red">@property</span> decorator to create a property for a class.
 - You can create read-only property by creating only the getter property on the attribute.
 - One of the most common <span class="red">use cases</span> of property() is building managed attributes that validate the input data before storing or even accepting it as a secure input.
-- Using @props and @props.setter for multiple instance attributes, makes your code repetition and breaks the <span class="red">DRY (Don’t Repeat Yourself)</span> principle, so you would want to refactor this code to avoid it. To do so, you can abstract out the repetitive logic using a <span class="red">descriptor</span>.
+- Using @props and @props.setter for multiple instance attributes, makes your code repetition and breaks the <span class="red">DRY (Don’t Repeat Yourself)</span> principle, so you would want to refactor this code to avoid it. To do so, you can abstract out the repetitive logic using a <span class="red">descriptor</span>. To avoid duplicating the logic, you may have a method that validates data and reuse this method in other properties. This approach will enable reusability. However, Python has a better way to solve this by using descriptors.
 - Reference: 
   - https://www.pythontutorial.net/python-oop/python-property-decorator/
   - https://realpython.com/python-property/
@@ -366,3 +366,18 @@ print(home.media_type) # text/html
 - Since Python doesn’t define a formal way to define mixin classes, it’s a good practice to name mixin classes with the <span class="red">suffix Mixin</span>.
 - Reference(s):
   - https://www.pythontutorial.net/python-oop/python-mixin/
+
+
+## Descriptors
+- Suppose you have a ```class Person``` with two instance attributes ```first_name``` and ```last_name``` And you want the first_name and last_name attributes to be non-empty strings. These plain attributes cannot guarantee this. To enforce the ```data validity``` you can use ```@property``` with a getter and setter methods. This code works perfectly fine. However, it is ```redundant``` because the validation logic validates the ```first``` and ```last``` names is the same. Also, if the class has more attributes that require a non-empty string, you need to duplicate this logic in other properties. In other words, this validation logic is not reusable. To avoid duplicating the logic, you may have a method that validates data and reuse this method in other properties. This approach will enable reusability. However, Python has a better way to solve this by using ```descriptors```.
+- In Python, the descriptor protocol consists of three methods: 
+  - ```__get__``` gets an attribute value.
+  - ```__set__``` sets an attribute value.
+  - ```__delete__``` deletes an attribute. 
+  - Optionally, a descriptor can have the ```__set_name__``` method that sets an attribute on an instance of a class to a new value.
+- A descriptor is an object of a class that implements one of the methods specified in the descriptor protocol.
+- Descriptors have two types: ```data descriptor``` and ```non-data descriptor```.
+  - A ```data descriptor``` is an object of a class that implements the ```__set__``` and/or ```__delete__``` method.
+  - A ```non-data descriptor``` is an object that implements the ```__get__``` method only.
+- Reference(s):
+  - https://www.pythontutorial.net/python-oop/python-descriptors/
