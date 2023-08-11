@@ -381,3 +381,38 @@ print(home.media_type) # text/html
   - A ```non-data descriptor``` is an object that implements the ```__get__``` method only.
 - Reference(s):
   - https://www.pythontutorial.net/python-oop/python-descriptors/
+
+
+## Dataclasses
+- Let say you have ```class Person``` has the ```__init__``` method that initializes the ```name``` and ```age``` attributes. If you want to have a string representation of the Person object, you need to implement the ```__str__``` or ```__repr__``` method. Also, if you want to compare two instances of the Person class by an attribute, you need to implement the ```__eq__``` method. However, if you use the ```dataclass```, you’ll have all of these features (and even more) without implementing these dunder methods.
+- The dataclasses module has the ```astuple()``` and ```asdict()``` functions that convert an instance of the dataclass to a tuple and a dictionary.
+- To create readonly objects from a dataclass, you can set the frozen argument of the dataclass decorator to True i.e., ```@dataclass(frozen=True)```.
+- If don’t want to initialize an attribute in the __init__ method, you can use the field() function from the dataclasses module. Use __post_init__ method to initalize attributes that depends on other attributes.
+- By default, a dataclass implements the __eq__ method. To allow different types of comparisons like __lt__, __lte__, __gt__, __gte__, you can set the order argument of the @dataclass decorator to True i.e., ```@dataclass(order=True)```.
+- Reference(s):
+  - https://www.pythontutorial.net/python-oop/python-dataclass/
+  - https://www.youtube.com/watch?v=CvQ7e6yUtnw
+
+
+## SOLID Principles
+- SOLID is an abbreviation that stands for five software design principles compiled by Uncle Bob:
+  - ```S``` – Single responsibility Principle
+  - ```O``` – Open-closed Principle
+  - ```L``` – Liskov Substitution Principle
+  - ```I``` – Interface Segregation Principle
+  - ```D``` – Dependency Inversion Principle
+- The single responsibility is the first principle in the SOLID principles.
+- When you build a Python project using object-oriented programming (OOP), planning how the different classes and objects will interact to solve your specific problems is an important part of the job. This planning is known as ```object-oriented design (OOD)```, and getting it right can be a challenge. If you’re stuck while designing your Python classes, then the SOLID principles can help you out.
+- SOLID is a set of five object-oriented design principles that can help you write more maintainable, flexible, and scalable code based on well-designed, cleanly structured classes. These principles are a fundamental part of object-oriented design best practices.
+- Reference(s):
+  - https://realpython.com/solid-principles-python/
+  - https://www.pythontutorial.net/python-oop/python-single-responsibility-principle/
+
+## Single Responsibility Principle
+- The single responsibility principle (SRP) states that every class, method, and function should have only one job or one reason to change.
+- To make it more convenient, you can use the facade pattern so that the ```Person``` class will be the facade for the ```PersonDB``` class.
+- The single-responsibility principle (SRP) comes from ```Robert C. Martin```, more commonly known by his nickname ```Uncle Bob```, who’s a well-respected figure in the software engineering world and one of the original signatories of the Agile Manifesto. In fact, he coined the term ```SOLID```. The single-responsibility principle states that: ```A class should have only one reason to change```. This means that a class should have only one ```responsibility```, as expressed through its ```methods```. If a class takes care of more than one task, then you should separate those tasks into separate classes. This principle is closely related to the concept of ```separation of concerns```, which suggests that you should split your programs into different sections. Each section must address a separate concern.
+- The concept of responsibility in this context may be pretty subjective. Having a single responsibility doesn’t necessarily mean having a single method. Responsibility isn’t directly tied to the number of methods but to the core task that your class is responsible for, depending on your idea of what the class represents in your code. However, that subjectivity shouldn’t stop you from striving to use the SRP.
+- Reference(s):
+  - https://www.pythontutorial.net/python-oop/python-single-responsibility-principle/
+  - https://realpython.com/solid-principles-python/#single-responsibility-principle-srp
