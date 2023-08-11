@@ -416,3 +416,12 @@ print(home.media_type) # text/html
 - Reference(s):
   - https://www.pythontutorial.net/python-oop/python-single-responsibility-principle/
   - https://realpython.com/solid-principles-python/#single-responsibility-principle-srp
+
+
+## Open-close Principle
+- The open-closed principle allows you to design the system so that it is open for extension but closed for modification. The purpose of the open-closed principle is to make it easy to add new features (or use cases) to the system without directly modifying the existing code.
+- The open-closed principle (OCP) for object-oriented design was originally introduced by ```Bertrand Meyer``` in 1988 and means that: ```Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification```.
+- We usually use abstraction to achieve the open-close principle.
+- Reference(s):
+  - https://www.pythontutorial.net/python-oop/python-open-closed-principle/
+  - https://realpython.com/solid-principles-python/#open-closed-principle-ocp
