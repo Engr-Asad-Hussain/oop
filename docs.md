@@ -404,9 +404,11 @@ print(home.media_type) # text/html
 - The single responsibility is the first principle in the SOLID principles.
 - When you build a Python project using object-oriented programming (OOP), planning how the different classes and objects will interact to solve your specific problems is an important part of the job. This planning is known as ```object-oriented design (OOD)```, and getting it right can be a challenge. If you’re stuck while designing your Python classes, then the SOLID principles can help you out.
 - SOLID is a set of five object-oriented design principles that can help you write more maintainable, flexible, and scalable code based on well-designed, cleanly structured classes. These principles are a fundamental part of object-oriented design best practices.
+- A complete example that follows all the 5 fundamental principles of SOILD ```./solid_principles.py```.
 - Reference(s):
   - https://realpython.com/solid-principles-python/
   - https://www.pythontutorial.net/python-oop/python-single-responsibility-principle/
+  - https://www.youtube.com/watch?v=pTB30aXS77U&t=70s
 
 ## Single Responsibility Principle
 - The single responsibility principle (SRP) states that every class, method, and function should have only one job or one reason to change.
@@ -416,6 +418,7 @@ print(home.media_type) # text/html
 - Reference(s):
   - https://www.pythontutorial.net/python-oop/python-single-responsibility-principle/
   - https://realpython.com/solid-principles-python/#single-responsibility-principle-srp
+  - https://www.youtube.com/watch?v=pTB30aXS77U&t=70s
 
 
 ## Open-close Principle
@@ -425,6 +428,7 @@ print(home.media_type) # text/html
 - Reference(s):
   - https://www.pythontutorial.net/python-oop/python-open-closed-principle/
   - https://realpython.com/solid-principles-python/#open-closed-principle-ocp
+  - https://www.youtube.com/watch?v=pTB30aXS77U&t=70s
 
 
 ## Liskov Substitution Principle
@@ -434,6 +438,7 @@ print(home.media_type) # text/html
 - Reference(s):
   - https://www.pythontutorial.net/python-oop/python-liskov-substitution-principle/
   - https://realpython.com/solid-principles-python/#liskov-substitution-principle-lsp
+  - https://www.youtube.com/watch?v=pTB30aXS77U&t=70s
 
 
 ## Interface Segregation Principle
@@ -444,6 +449,7 @@ print(home.media_type) # text/html
 - Reference(s)
   - https://www.pythontutorial.net/python-oop/python-interface-segregation-principle/
   - https://realpython.com/solid-principles-python/#interface-segregation-principle-isp
+  - https://www.youtube.com/watch?v=pTB30aXS77U&t=70s
 
 
 ## Dependency Inversion Principle
@@ -455,3 +461,4 @@ print(home.media_type) # text/html
 - Reference(s):
   - https://www.pythontutorial.net/python-oop/python-dependency-inversion-principle/
   - https://realpython.com/solid-principles-python/#dependency-inversion-principle-dip
+  - https://www.youtube.com/watch?v=pTB30aXS77U&t=70s
