@@ -434,3 +434,13 @@ print(home.media_type) # text/html
 - Reference(s):
   - https://www.pythontutorial.net/python-oop/python-liskov-substitution-principle/
   - https://realpython.com/solid-principles-python/#liskov-substitution-principle-lsp
+
+
+## Interface Segregation Principle
+- The ```interface segregation principle``` advises that the interfaces should be small in terms of cohesions. Make fine grained interfaces that are client-specific. Clients should not be forced to implement interfaces they ```do not use```.
+- An ```interface``` is a description of behaviors that an object can do. For example, when you press the power button on the TV remote control, it turns the TV on, and you don’t need to care how. In object-oriented programming, an interface is a set of ```methods``` an object must-have. The purpose of interfaces is to allow clients to request the correct methods of an object via its interface.
+- Python uses ```abstract classes``` as interfaces because it follows the so-called duck typing principle. The duck typing principle states that “if it walks like a duck and quacks like a duck, it must be a duck.” In other words, the methods of a class determine what its objects will be, not the type of the class.
+- The interface segregation principle (ISP) comes from the same mind as the single-responsibility principle. Yes, it’s another feather in ```Uncle Bob’s cap```. The principle’s main idea is that: ```Clients should not be forced to depend upon methods that they do not use. Interfaces belong to clients, not to hierarchies```. In this case, ```clients are classes and subclasses```, and ```interfaces consist of methods and attributes```. In other words, if a class doesn’t use particular methods or attributes, then those methods and attributes should be segregated into more specific classes.
+- Reference(s)
+  - https://www.pythontutorial.net/python-oop/python-interface-segregation-principle/
+  - https://realpython.com/solid-principles-python/#interface-segregation-principle-isp
