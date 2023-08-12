@@ -425,3 +425,12 @@ print(home.media_type) # text/html
 - Reference(s):
   - https://www.pythontutorial.net/python-oop/python-open-closed-principle/
   - https://realpython.com/solid-principles-python/#open-closed-principle-ocp
+
+
+## Liskov Substitution Principle
+- The Liskov substitution principle states that a child class must be substitutable for its parent class. Liskov substitution principle aims to ensure that the child class can assume the place of its parent class without causing any errors.
+- The ```Liskov substitution principle (LSP)``` was introduced by ```Barbara Liskov``` at an OOPSLA conference in 1987. Since then, this principle has been a fundamental part of object-oriented programming. The principle states that: ```Subtypes must be substitutable for their base types```. For example, if you have a piece of code that works with a Shape class, then you should be able to substitute that class with any of its subclasses, such as Circle or Rectangle, without breaking the code.
+- In practice, this principle is about making your subclasses behave like their base classes without breaking anyone’s expectations when they call the same methods. 
+- Reference(s):
+  - https://www.pythontutorial.net/python-oop/python-liskov-substitution-principle/
+  - https://realpython.com/solid-principles-python/#liskov-substitution-principle-lsp
