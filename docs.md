@@ -444,3 +444,14 @@ print(home.media_type) # text/html
 - Reference(s)
   - https://www.pythontutorial.net/python-oop/python-interface-segregation-principle/
   - https://realpython.com/solid-principles-python/#interface-segregation-principle-isp
+
+
+## Dependency Inversion Principle
+- The dependency inversion principle states that: 
+  - High-level modules should not depend on low-level modules. Both should depend on abstractions
+  - Abstractions should not depend on details. Details should depend on abstractions.
+- The dependency inversion principle aims to reduce the coupling between classes by creating an abstraction layer between them.
+- It states that: ```Abstractions should not depend upon details. Details should depend upon abstractions```.
+- Reference(s):
+  - https://www.pythontutorial.net/python-oop/python-dependency-inversion-principle/
+  - https://realpython.com/solid-principles-python/#dependency-inversion-principle-dip
