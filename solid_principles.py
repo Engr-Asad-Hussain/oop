@@ -95,51 +95,56 @@ class PaypalPaymentProcessor(PaymentProcessor):
         order.status = "paid"
 
 
-order = Order()
-order.add_item("Mangoes", 5, 5.0)
-order.add_item("Bananas", 12, 2.0)
-order.add_item("Mangoes", 18, 20.0)
-cost = order.total_price()
-print(f"Your total cost is: {cost}")
-print()
-user_input = int(
-    input(
-        "Which payment method you want to choose? We offer [1]debit / [2]credit / [3]Paypal. "
+def main():
+    order = Order()
+    order.add_item("Mangoes", 5, 5.0)
+    order.add_item("Bananas", 12, 2.0)
+    order.add_item("Mangoes", 18, 20.0)
+    cost = order.total_price()
+    print(f"Your total cost is: {cost}")
+    print()
+    user_input = int(
+        input(
+            "Which payment method you want to choose? We offer [1]debit / [2]credit / [3]Paypal. "
+        )
     )
-)
 
-if user_input == 1:
-    # Verifying the SMS
-    sms = SMSAuthorizer()
-    sms_code = int(input("We have send you a code on +....39: "))
-    sms.verify(sms_code)
-    # Proceed to Payment
-    security_code = int(input("Please provide security code: "))
-    payment_processor = DebitPaymentProcessor(security_code, sms)
-    payment_processor.pay(order)
+    if user_input == 1:
+        # Verifying the SMS
+        sms = SMSAuthorizer()
+        sms_code = int(input("We have send you a code on +....39: "))
+        sms.verify(sms_code)
+        # Proceed to Payment
+        security_code = int(input("Please provide security code: "))
+        payment_processor = DebitPaymentProcessor(security_code, sms)
+        payment_processor.pay(order)
 
-elif user_input == 2:
-    # Verifying the SMS
-    sms = SMSAuthorizer()
-    sms_code = int(input("We have send you a code on +....39: "))
-    sms.verify(sms_code)
-    # Proceed to Payment
-    security_code = int(input("Please provide security code: "))
-    payment_processor = CreditPaymentProcessor(security_code, sms)
-    payment_processor.pay(order)
+    elif user_input == 2:
+        # Verifying the SMS
+        sms = SMSAuthorizer()
+        sms_code = int(input("We have send you a code on +....39: "))
+        sms.verify(sms_code)
+        # Proceed to Payment
+        security_code = int(input("Please provide security code: "))
+        payment_processor = CreditPaymentProcessor(security_code, sms)
+        payment_processor.pay(order)
 
-elif user_input == 3:
-    # Verifying Not a Robot
-    robot = NotARobot()
-    robot_code = int(input("Please verify you are a human: "))
-    robot.verify(robot_code)
-    # Proceed to Payment
-    email_address = input("Please provide email address: ")
-    payment_processor = PaypalPaymentProcessor(email_address)
-    payment_processor.pay(order)
+    elif user_input == 3:
+        # Verifying Not a Robot
+        robot = NotARobot()
+        robot_code = int(input("Please verify you are a human: "))
+        robot.verify(robot_code)
+        # Proceed to Payment
+        email_address = input("Please provide email address: ")
+        payment_processor = PaypalPaymentProcessor(email_address)
+        payment_processor.pay(order)
 
-else:
-    raise Exception("We donot support anyother payment methods.")
+    else:
+        raise Exception("We donot support anyother payment methods.")
 
-print()
-print(f"Your payment status is: {order.status}")
+    print()
+    print(f"Your payment status is: {order.status}")
+
+
+if __name__ == "__main__":
+    main()

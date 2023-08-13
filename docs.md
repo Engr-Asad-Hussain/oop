@@ -321,14 +321,15 @@ print(home.media_type) # text/html
 
 
 ## Protocols
-- Use Python <span class="red">Protocol</span> to define implicit interfaces.
-- In <span class="red">duck typing</span>, the behaviors and properties of an object determine the object type, not the explicit type of the object.
-- The duck typing is inspired by the duck test: <span class="red">If it walks like a duck and its quacks like a duck, then it must be a duck.</span>
+- Use Python ```Protocol``` to define implicit interfaces.
+- In ```duck typing```, the behaviors and properties of an object determine the object type, not the explicit type of the object.
+- The duck typing is inspired by the duck test: ```If it walks like a duck and its quacks like a duck, then it must be a duck```.
 - When we use Protocols then there is no more import dependencies.
 - Protocols were introduced in Python 3.8 as an alternative to Python ABC and they are differently in typing point of view. ABC classes relay on the nominal typing that means if you want typing relationship be there ```A is type(B)``` then you need to explicitly write down in your code for example using inheritance. So, you have abstract base class, you create subclasses from that abstract base class, you inherit from it and establish a relationship. Python interpreter uses that relationship to determine whether or not the types matched. Protocols are different, they relay on the structure typing and that means instead of having explicitly defining typing (A is of Protocol), Python looks at how the structure is of these objects. Do they have the same method? Do they have the same properties? If so, it will assume that the types matched. So that means that the usage of Protocols is actually also quite different. You don't establish generally inheritance relationships with them you don't inherit from a protocol class but the  protocol defines the interface that is expected in the part of program that refers to it. So, if you have a function or method in a class that gets an argument of a particular protocol type then anything that implements those methods that hase those properties can be passed as an argument to that function or method and structure typing that will actually do the comparsion of the structure of the objects is going to make sure that program works as expected to. This fits very will with the Python runtime type checking system that treats two objects the same if they have the same methods and properties that also called duct typing. 
 - Reference(s):
   - https://www.pythontutorial.net/python-oop/python-protocol/
   - https://www.youtube.com/watch?v=xvb5hGLoK0A&t=452s
+  - https://www.arjancodes.com/mindset/type-hints
 
 
 ## Enums (Enumerations)
