@@ -4,7 +4,7 @@ Many of the design patterns in the ***Gang of Four Design Patterns*** book are b
   1. One way to do it is inheritance. So instead of putting everything in one single big class, you would create a class hierarchy of classes and subclasses, where you would put certain things in a subclass so that it would be separated from the main class. 
   2. Another way you can do is composition. That means that you are basically using separate classes to represent separate things in the application. And then each of these classes use each other in some meaningful way. 
 
-Its basically the difference between the **is-a relationship** which is inheritance and **has-a relationship** which is composition; allow you to separate responsibilities.
+Its basically the difference between the **```is-a relationship```** which is inheritance and **has-a relationship** which is composition; allow you to separate responsibilities.
 `#FFF asdasd`
 > [!NOTE]
 > Highlights information that users should take into account, even when skimming.
