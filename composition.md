@@ -1,8 +1,8 @@
 ## Composition: Favour composition over inheritance
 
-Many of the design patterns in the ***Gang of Four Design Patterns*** book are based on the principle favour composition over inheritance. But what does that mean? Let's find out. If you want to separate responsibilities, create code with higher cohession, there's a couple of ways to do it. 
-  1. One way to do it is inheritance. So instead of putting everything in one single big class, you would create a class hierarchy of classes and subclasses, where you would put certain things in a subclass so that it would be separated from the main class. 
-  2. Another way you can do is composition. That means that you are basically using separate classes to represent separate things in the application. And then each of these classes use each other in some meaningful way. 
+Many of the design patterns in the ***Gang of Four Design Patterns*** book are based on the principle that favour composition over inheritance. But what does that mean? Let's find out. If you want to separate responsibilities (_Single Responsibility Principle by Robert C. Martin_), create code with higher cohession, there's a couple of ways to do it. 
+  1. One way to do it is ***inheritance***. So instead of putting everything in one single big class, you would create a class hierarchy of classes and subclasses, where you would put certain things in a subclass so that it would be separated from the main class. 
+  2. Another way you can do is ***composition***. That means that you are basically using separate classes to represent separate things in the application. And then each of these classes use each other in some meaningful way. 
 
 Its basically the difference between the ```is-a relationship``` which is inheritance and ```has-a relationship``` which is composition; allow you to separate responsibilities.
 
@@ -62,7 +62,7 @@ class SalariedEmployee:
             + self.commission * self.contracts_landed
         )
 ```
-Salaried employee that gets a fixed monthly salary. Salaried employees quite to similar to ```HourlyEmployee```. It also has a ```name```, ```id```, it also has a commission structure. But there is a ```monthly salary``` and a ```percentage``` of time that the employee works. And then this is the ```compute pay``` method. 
+Salaried employee that gets a fixed monthly salary. Salaried employees quite to similar to ```HourlyEmployee```. It also has a ```name```, ```id```, it also has a ```commission``` structure. But there is a ```monthly salary``` and a ```percentage``` of time that the employee works. And then this is the ```compute pay``` method. 
 
 ```py
 class FreelancerEmployee:
@@ -117,10 +117,10 @@ In the main function where we create a couple of these employees print out some 
 ### Explanation of problems
 Now, let's analyse this code, there's two main problems.
 > [!WARNING]
-> The first problem is that there's a lot of code duplication, I mean, hourly employee has Commission's contract contracts landed, so a salaried employee and Freelancer has this as well, there's a lot of duplication in the way that the pay is computed.
+> The first problem is that there's a lot of ***code duplication***, I mean, hourly employee has Commission, contracts landed, so a salaried employee and Freelancer has this as well, there's a lot of duplication in the way that the pay is computed.
 
 > [!WARNING]
-> Another issue is that each of these classes have a lot of responsibilities. For example, here, this one is responsible for storing personnel data, it's responsible for dealing with commissions, and it's responsible for the pay rate and hours worked and how to compute the pay based on that. And the same goes for the salaried employee, and for the Freelancer as well.
+> Another issue is that each of these classes have a ***lot of responsibilities***. For example, here, this one is responsible for storing personnel data, it's responsible for dealing with commissions, and it's responsible for the pay rate and hours worked and how to compute the pay based on that. And the same goes for the salaried employee, and for the Freelancer as well.
 
 So two problems that we'd like to solve. And you can use inheritance to do it by basically creating a hierarchy of classes and subclasses. Or you could also use composition. And that's basically separating out the different aspects of what a class consists of, and then combining them later on.
 
@@ -171,7 +171,8 @@ Let's verify that this still works correctly.
 `Sarah` landed `10` contracts and earned `$6000`.
 ```
 
-We've used inheritance to separate out a bit of information about employees and separated that from the rest. So for this inheritance works fine. But the problem is, each of these classes still have too many responsibilities. For example, there is both commission information and pay information. So it would be nice to also separate that out. If you want to use inheritance, what you need to do is create subclasses for each of these employee types to have a version with Commission and the version without permission. So for example, what you could do is create a ```class SalariedEmployeeWithCommission``` that is a subclass of ```SalariedEmployee```.
+We've used inheritance to separate out a bit of information about employees and separated that from the rest. So for this inheritance works fine. ***But the problem is, each of these classes still have too many responsibilities.*** For example, there is both commission information and pay information. So it would be nice to also separate that out. If you want to use inheritance, what you need to do is create subclasses for each of these employee types to have a version with commission and the version without commission. 
+So for example, what you could do is create a ```class SalariedEmployeeWithCommission``` that is a subclass of ```SalariedEmployee```.
 
 ```py
 class SalariedEmployee(Employee):
@@ -230,15 +231,15 @@ But now see, we use inheritance to separate these different responsibilities a b
 
 ### Problems with the inheritance technique
 > [!IMPORTANT]
-> You already see where this is leading to issues. Because one thing we didn't really solve is the ```code duplication```, because if you look at ```FreelancerWithCommission```, and you look at ```SalariedEmployeeWithCommission``` these classes are more or less the same. Basically, the only difference is that they're a subclass of another class. ```SalariedEmployeeWithCommission``` one is a subclass of ```SalariedEmployee```. ```FreelancerWithCommission``` is a subclass of ```Freelancer```. So code duplication, we didn't really solve.
+> You already see where this is leading to issues. Because one thing we didn't really solve is the ***code duplication***, because if you look at ```FreelancerWithCommission```, and you look at ```SalariedEmployeeWithCommission``` these classes are more or less the same. Basically, the only difference is that they're a subclass of another class. ```SalariedEmployeeWithCommission``` one is a subclass of ```SalariedEmployee```. ```FreelancerWithCommission``` is a subclass of ```Freelancer```. So code duplication, we didn't really solve.
 
 > [!IMPORTANT]
-> Another issue by doing this with inheritance that basically for every variation that we're going to add, we're going to get this explosion of subclasses. For example, suppose you also want to have a yearly bonus that's included with the pay, then you would get a lots and lots of subclasses, like ```FreelancerWithCommissionWithoutBonus```, ```SalariedEmployeeWithoutCommissionWithBonus```, etc, etc. 
+> Another issue by doing this with inheritance that basically for every variation that we're going to add, we're going to get this ***explosion of subclasses***. For example, suppose you also want to have a yearly bonus that's included with the pay, then you would get a lots and lots of subclasses, like ```FreelancerWithCommissionWithoutBonus```, ```SalariedEmployeeWithoutCommissionWithBonus```, etc, etc. 
 
-So in the end, that kind of approach doesn't really work. And that's also the crux of what it means when we say ```favour composition over inheritance```. If you use inheritance too much to separate the responsibilities in this way, it means you're going to end up with this huge hierarchy of subclasses and it's going to be really difficult to deal with also because inheritance actually introduces a lot of coupling because for example, here the ```FreelancerWithCommission``` uses again the ```compute_pay``` from the super class ```super().compute_pay()```, so it assumes things about what compute pay does and superclass does. That's what happens when you do this with inheritance. 
+So in the end, that kind of approach doesn't really work. And that's also the crux of what it means when we say ```favour composition over inheritance```. If you use inheritance too much to separate the responsibilities in this way, it means you're going to end up with this huge hierarchy of subclasses and it's going to be really difficult to deal with also because ***inheritance actually introduces a lot of coupling*** because for example, here the ```FreelancerWithCommission``` uses again the ```compute_pay``` from the super class ```super().compute_pay()```, so it assumes things about what compute pay does and superclass does. That's what happens when you do this with inheritance. 
 
 ### Technique 2: Composition
-let's look at another option, which is composition. And with composition, we're not creating hierarchies of classes, we're trying to separate out the concepts and then combine them in meaningful ways. In this case, we have a few different concepts. Whereas the employee, with the employee data, we have the employee payment structure, which is either hourly or salaried, or on Freelancer basis. And we have the Commission, which is based on the number of contracts that an employee has landed. So what you can do, instead of using inheritance to combine all these things, you could also create separate class hierarchies for each of these three different things and then combine them later on, what you could do in this example is create a commission class and a contract class and combine them with the employee class later on. 
+let's look at another option, which is ```composition```. And with composition, we're not creating hierarchies of classes, we're trying to separate out the concepts and then combine them in meaningful ways. In this case, we have a few different concepts. Whereas the employee, with the employee data, we have the employee payment structure, which is either hourly or salaried, or on Freelancer basis. And we have the commission, which is based on the number of contracts that an employee has landed. So what you can do, instead of using inheritance to combine all these things, you could also create separate class hierarchies for each of these three different things and then combine them later on, what you could do in this example is create a commission class and a contract class and combine them with the employee class later on. 
 So first thing I'm going to create a commission class. 
 
 ```py
