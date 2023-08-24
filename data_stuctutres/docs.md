@@ -16,6 +16,21 @@ stateDiagram-v2
 graph LR
 A[Square 1] --> B[Square 2]
 ```
+```mermaid
+rectangle R {
+  fill: #ccc
+  stroke: #333
+  width: 200px
+  height: 100px
+}
+
+line L {
+  start: R.center
+  end: R.center
+  stroke: #333
+  linetype: dashed
+}
+```
 > [!NOTE]
 > A ```linked list``` is a collection of nodes. The first node is called the ```head```, and it’s used as the starting point for any iteration through the list. The last node must have its ```next``` reference pointing to ```None``` to determine the end of the list.
 Here’s how it looks:
