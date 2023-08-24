@@ -8,11 +8,9 @@ Before going more in depth on what linked lists are and how you can use them, yo
 
 Here’s what a typical node looks like:
 ```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+stateDiagram-v2
+    State1: The state with a note
+    State2: The sate with a backend node
 ```
 > [!NOTE]
 > A ```linked list``` is a collection of nodes. The first node is called the ```head```, and it’s used as the starting point for any iteration through the list. The last node must have its ```next``` reference pointing to ```None``` to determine the end of the list.
