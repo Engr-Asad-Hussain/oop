@@ -123,5 +123,8 @@ Now suppose that after the user read both articles, they wanted to go back to th
 deque(['https://realpython.com/'])
 ```
 
+### Implementing Your Own Linked List
+(checkout the example data_stuctures/linked_list/own_linked_list.py)
+
 - Reference(s):
   - https://realpython.com/linked-lists-python/
