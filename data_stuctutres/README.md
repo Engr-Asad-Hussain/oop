@@ -6,7 +6,7 @@
 ## Linked List
 - Linked lists are an ***ordered collection of objects***.
 - Linked lists differ from lists in the way that they ***store elements in memory***. While lists use a ***contiguous memory block*** to store references to their data, linked lists store references as part of their own elements.
-- In depth discussion present at [data_structures/linked_list/docs.md](https://github.com/Engr-Asad-Hussain/oop/blob/main/data_stuctutres/linked_list/docs.md)
+- In depth discussion present at [data_structures/linked_list/docs.md](https://github.com/Engr-Asad-Hussain/oop/blob/main/data_stuctutres/linked_list/README.md)
 
 
 ## Performance Comparison: Lists vs Linked Lists
