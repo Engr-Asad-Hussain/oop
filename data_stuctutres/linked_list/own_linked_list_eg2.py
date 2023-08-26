@@ -185,17 +185,12 @@ linked_list.pop_left()
 print(f"{linked_list = } | H={linked_list.head}")
 
 linked_list.pop_right()
-
-reversed_linked_list = linked_list.reverse()
 print(f"{linked_list = } | H={linked_list.head}")
-print(f"{reversed_linked_list = } | H={reversed_linked_list.head}")
 
-reversed_linked_list.reverse1()
-print(f"{reversed_linked_list = } | H={reversed_linked_list.head}")
-
-
-# for element in linked_list:
-#     print(element.data, element.next)
+linked_list.reverse()
+print(f"{linked_list = } | H={linked_list.head}")
 
 
-# Shallow Copy stores the references of objects to the original memory address. Deep copy stores copies of the object's value. Shallow Copy reflects changes made to the new/copied object in the original object. Deep copy doesn't reflect changes made to the new/copied object in the original object.
+print("... Iterator Method on Linked List ...")
+for element in linked_list:
+    print(element.data, element.next)
