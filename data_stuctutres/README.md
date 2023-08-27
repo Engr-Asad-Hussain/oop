@@ -36,6 +36,7 @@
 | ```insertion```/```deletion``` at between | O(n) | O(n) | Same |
 | ```retrieval``` of element at specific index | O(1) | O(n) | List |
 | ```searching``` of specific element | O(n) | O(n) | Same |
+
 Here, ```n``` is the number of elements in a list or number of nodes in a linked list.
 
 
