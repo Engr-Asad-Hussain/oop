@@ -1,6 +1,8 @@
 ## Contents
   - [Linked List](#linked-list)
   - [Shallow/Deep copy](#shallow-copy--deep-copy)
+  - [List](#lists)
+  - [CPython Time Complexities](#python-data-types-time-complexities)
 
 
 ## Linked List
@@ -42,3 +44,14 @@ Here, ```n``` is the number of elements in a list or number of nodes in a linked
 
 ## Shallow copy / Deep copy
 Shallow Copy stores the references of objects to the original memory address. Deep copy stores copies of the object's value. Shallow Copy reflects changes made to the new/copied object in the original object. Deep copy doesn't reflect changes made to the new/copied object in the original object.
+
+
+## Lists
+- Python’s list is a flexible, versatile, powerful, and popular built-in data type. 
+- It allows you to create variable-length and mutable sequences of objects. 
+- In a list, you can store objects of any type. You can also mix objects of different types within the same list, although list elements often share the same type.
+- In depth discussion present at [data_structures/list/docs.md](https://github.com/Engr-Asad-Hussain/oop/blob/main/data_stuctutres/list/README.md)
+
+
+## Python data types time complexities
+https://wiki.python.org/moin/TimeComplexity
