@@ -1,29 +1,29 @@
+# 9. Palindrome Number
+# Easy
+
+
 class Solution:
     def is_palindrome(self, x: int) -> bool:
         x_string = str(x)
-        y_string = x_string[::-1]  # Reverse x_string
+        y_string = x_string[::-1]
         return x_string == y_string
 
     def is_palindrome_integer_version(self, x: int) -> bool:
-        quotient, remainder = divmod(x, 10)
-        print(f"{quotient=} | {remainder=}")
+        if x < 0:
+            return False
 
-        # 121
-        # quotient=12 | remainder=1
-        # 12
-        # quotient=1 | remainder=2
+        dividend = x
+        tmp = 0
+        while dividend:
+            quotient, remainder = divmod(dividend, 10)
+            tmp = tmp * 10
+            tmp = tmp + remainder
+            dividend = quotient
 
-        # 101
-        # quotient=10 | remainder=1
-        # 10
-        # quotient=1 | remainder=0
-
-        # 102
-        # quotient=10 | remainder=2
-        # 10
-        # quotient=1 | remainder=0
+        return tmp == x
 
 
+value = int(input("Please enter a number to be check as Palindrome: "))
 sol = Solution()
-print(sol.is_palindrome(102301))
-print(sol.is_palindrome_integer_version(10))
+print(sol.is_palindrome(value))
+print(sol.is_palindrome_integer_version(value))
