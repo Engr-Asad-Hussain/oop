@@ -57,22 +57,6 @@ class Solution:
 
         return sum
 
-    def another_sol(self, s: str) -> int:
-        string = (
-            s.replace("IV", "IIII")
-            .replace("IX", "VIIII")
-            .replace("XL", "XXXX")
-            .replace("XC", "LXXXX")
-            .replace("CD", "CCCC")
-            .replace("CM", "DCCCC")
-        )
-
-        ans = 0
-        for value in string:
-            ans += self.mapping[value]
-
-        return ans
-
     def roman_to_int_improve(self, s: str) -> int:
         ans = 0
         for i in range(len(s)):
@@ -86,6 +70,22 @@ class Solution:
                 ans -= current_value
             else:
                 ans += current_value
+
+        return ans
+
+    def another_sol(self, s: str) -> int:
+        string = (
+            s.replace("IV", "IIII")
+            .replace("IX", "VIIII")
+            .replace("XL", "XXXX")
+            .replace("XC", "LXXXX")
+            .replace("CD", "CCCC")
+            .replace("CM", "DCCCC")
+        )
+
+        ans = 0
+        for value in string:
+            ans += self.mapping[value]
 
         return ans
 
