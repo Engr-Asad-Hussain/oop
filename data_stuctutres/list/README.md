@@ -120,5 +120,7 @@ So, that explains why accessing elements in a list and appending new ones is a c
 
 In other words, the amount of time the operation takes depends on how many elements are in the list. This is because every element after the desired location for the new item must be pushed down by one address to make space for the new one. Then, the new element can be added. As you can imagine, the slowest scenario is inserting a new item at the beginning of a list, which requires that all the existing elements in the underlying array be shifted down by one address.
 
+In addition, `sorted` is used to sort the elements of a list in ascending order which has the time complexity of `n*log(n)`; where `n` is the number of elements in the list.
+
 > [!WARNING]
 > The bottom line is this: ***lists are great when we need to quickly obtain items at a specific index or when we need to append new items to the end, but they start to slow down when we try to insert new items somewhere in the middle or—in the worst case—at the beginning.*** 
